@@ -14,15 +14,39 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"]
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+      "@core/*": ["core/*"],
+      "@fonts/*": ["fonts/*"],
+      "@entities/*": ["entities/*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
+      "@interfaces": ["interfaces"],
+      "@interfaces/*": ["interfaces/*"],
+      "@Layout": ["Layout"],
+      "@Layout/*": ["Layout/*"],
+      "@models": ["models"],
+      "@models/*": ["models/*"],
+      "@pageComponents": ["pageComponents"],
+      "@pageComponents/*": ["pageComponents/*"],
+      "@providers": ["providers"],
+      "@providers/*": ["providers/*"],
+      "@public/*": ["public/*"],
+      "@styles": ["styles"],
+      "@styles/*": ["styles/*"],
+      "@services": ["services"],
+      "@services/*": ["services/*"],
+      "@theme": ["theme"],
+      "@theme/*": ["theme/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"],
+      "@validations": ["validations"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

@@ -1,4 +1,24 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  reactStrictMode: true,
+  publicRuntimeConfig: {
+    NEXT_PUBLIC_BASE_API: process.env.NEXT_PUBLIC_BASE_API,
+    NEXT_PUBLIC_HOST: process.env.NEXT_PUBLIC_HOST,
+  },
+  
+  compiler: {
+    styledComponents: true
+  },
 
-module.exports = nextConfig
+  async redirects() {
+    return [
+      {
+        source: '/tenders',
+        destination: '/',
+        permanent: true,
+      }, 
+    ];
+  },
+};
+
+module.exports = nextConfig;
